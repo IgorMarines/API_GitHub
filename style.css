@@ -33,17 +33,23 @@ main {
     justify-content: center;
     align-items: center;
     color: var(--text);
-    font-family: 'Prompt';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 24px;
-    line-height: 36px;
     margin-top: 37px;
     margin-bottom: 11px;
 }
 
 .rocketHeader h1 {
     margin-left: 19px;
+    
+}
+
+h1 {
+    font-family: 'Prompt';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 36px;
+
+color: #FFFFFF;
 }
 
 .rocketHeader>img {
@@ -74,8 +80,8 @@ main {
     max-width: 195.5px;
     max-height: 194.7px;
     padding: 29px;
-    position: absolute;
     margin-top: -110px;
+    position: absolute;
 }
 
 .rocketFooter {
@@ -107,19 +113,28 @@ button {
     cursor: pointer;
 }
 
-@media (max-width: 900px)
-{
-  button
-   {
-    display: none;
-   }
-   main {
-    height: 110vh;
-    border-radius: 0;
-    border: none;
-   }
-   .infos-profile{
-    position: unset;
-    margin-left: 40px;
-   }
+@media (max-width: 900px) {
+    body {
+        overflow-y: hidden;
+    }
+    button {
+        display: none;
+    }
+
+    main {
+        height: 110vh;
+        border-radius: 0;
+        border: none;
+    }
+
+    h1 {
+        font-family: 'Prompt';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+
+        color: #FFFFFF;
+    }
+    
 }
