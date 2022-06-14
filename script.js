@@ -1,15 +1,14 @@
 const ul = document.querySelector('ul')
 
-function getApiGitHub() {
-    fetch('https://api.github.com/users/1enablex')
-    .then(async res => {
+async function getApiGitHub() {
+    try {
+        const response = await fetch('https://api.github.com/users/1enablex')
 
-        if(!res.ok) {
-            throw new Error(res.status)
+        if (!response.ok) {
+            throw new Error(response.status)
         }
 
-        let data = await res.json()
-        
+        let data = await response.json()
         let resultado = document.getElementById('resultado')
         resultado.innerHTML = `
         <div>
@@ -19,13 +18,10 @@ function getApiGitHub() {
         <strong><img src="./assets/assets/company.svg">${!data.company ? 'Sem empresa' : data.company}</strong><br>
         <strong><img src="./assets/assets/location.svg">${data.location}</strong><br>
         </div>`
-
-    }).catch(e => console.log(e))
-
+    } catch (error) {
+        console.error(error)
+    }
 }
-
-
-
 
 getApiGitHub()
 
@@ -33,19 +29,19 @@ function generateColor() {
 
     const letters = '0123456789ABCDEF';
     let color = '#';
-    
+
     for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
+        color += letters[Math.floor(Math.random() * 16)];
     }
-    
+
     return color;
-    
-  }
-  
-  console.log(generateColor()) // #8432EA
+
+}
+
+console.log(generateColor()) // #8432EA
 
 var mudarFundo = document.querySelector('body')
 
-function changeBg(){
+function changeBg() {
     mudarFundo.style.backgroundColor = generateColor()
 }
