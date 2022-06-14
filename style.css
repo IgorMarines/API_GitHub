@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg: #000000;
+    --bg-card: #0E1218;
+    --text: #F1F1F1;
+    --img-profile: #8257e5;
+    --buttons: #FFF;
+    --border-button: #1A1A1A;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-card);
+}
+
+main {
+    background-color: var(--bg-card);
+    border-radius: 50px;
+    border: 40px solid var(--bg);
+}
+
+.rocketHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 37px;
+    margin-bottom: 11px;
+}
+
+.rocketHeader h1 {
+    margin-left: 19px;
+}
+
+.rocketHeader>img {
+    border: 1px solid #F1F1F1;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.foto-profile>img {
+    border: 10px solid #8257E5;
+    background: #523496;
+    border-radius: 50%;
+}
+
+.infos-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    background: linear-gradient(180deg, #000000 3.65%, rgba(70, 69, 69, 0.72) 53.65%, rgba(62, 56, 56, 0.42) 100%);
+    border-radius: 50px;
+    color: #FFFFFF;
+    max-width: 195.5px;
+    max-height: 194.7px;
+    padding: 29px;
+    position: absolute;
+    margin-top: -110px;
+}
+
+.rocketFooter {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 68px;
+    color: #FFFFFF;
+}
+
+#changeBg {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    background: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #F1F1F1;
+    padding: 18px 47px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px)
+{
+  button
+   {
+    display: none;
+   }
+   main {
+    height: 110vh;
+    border-radius: 0;
+    border: none;
+   }
+   .infos-profile{
+    position: unset;
+    margin-left: 40px;
+   }
+}
