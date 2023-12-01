@@ -2,7 +2,7 @@ const ul = document.querySelector('ul')
 
 async function getApiGitHub() {
     try {
-        const response = await fetch('https://api.github.com/users/1enablex')
+        const response = await fetch('https://api.github.com/users/igormarines')
 
         if (!response.ok) {
             throw new Error(response.status)
